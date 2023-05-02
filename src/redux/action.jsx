@@ -47,7 +47,7 @@ export function fetchDataPending() {
   
       try {
         const users = await fetch(
-          "https://jsonplaceholder.typicode.com/users"
+          "https://jsonplaceholder.typicode.com/posts"
         ).then(res => res.json());
         dispatch(fetchDataSuccess({ users }));
       } catch {
@@ -61,7 +61,7 @@ export function fetchDataPending() {
   
       try {
         const post = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${postId}`
+          `https://jsonplaceholder.typicode.com/posts/1/comments${postId}`
         ).then(res => res.json());
   
         if (!post || post.id !== parseInt(postId, 10))
