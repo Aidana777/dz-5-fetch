@@ -6,13 +6,13 @@ const initialState = {
 }
 
 export const commentReducer = (state = initialState, action) => {
-    if (action.type === types.VIEV_COMMENT) {
+    if (action.type === types.COMMENT) {
         return {...state, comments: action.payload}
     }
     return state
 }
 
-const viewComment = (payload) => ({type: types.VIEV_COMMENT, payload: payload})
+const viewComment = (payload) => ({type: types.COMMENT, payload: payload})
 
 
 export const fetchComment = (id) => {
